@@ -1,3 +1,19 @@
+body{
+  font-family: Arial, Helvetica, sans-serif !important;
+  margin: 0;
+}
+
+.center-page{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.center{
+  text-align: center;
+}
+
 .low-usage{
   color: green;
 }
@@ -8,4 +24,10 @@
 
 .high-usage{
   color: red;
+}
+
+.city-background{
+  background-image: url(../images/Barcelona.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
