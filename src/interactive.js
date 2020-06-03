@@ -1,6 +1,17 @@
 
 function currentTemp(temp){
     $('#temperature').text( "Current Temp: " + temp.GetCurrentTemp());
+
+    if (temp.Usage() == "Low - Usage"){
+        $('#temperature').removeClass();
+        $('#temperature').addClass('low-usage');
+    } else if (temp.Usage() == "Medium - Usage"){
+        $('#temperature').removeClass();
+        $('#temperature').addClass('medium-usage');
+    } else {
+        $('#temperature').removeClass();
+        $('#temperature').addClass('high-usage');
+    }
 }
 
 function psmStat(temp){
