@@ -62,6 +62,27 @@ function psmOff(temp){
     });
 }
 
+function GetAPI(){
+
+$('#select-city').submit(function(event) {
+    event.preventDefault();
+    var city = $('#current-city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+      $('#current-temperature').text(data.main.temp);
+    })
+
+    console.log(city);
+  });
+}
+// $('#select-city').submit(function(event) {
+//     event.preventDefault();
+//     var city = $('#current-city').val();
+//     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=1553e595a684699f6d05e9fe7b9690f1&units=metric', function(data) {
+//       $('#current-temperature').text(data.main.temp);
+//     })
+
+//     console.log(city);
+//   })
 
 
 $(document).ready(function(){
@@ -73,4 +94,8 @@ $(document).ready(function(){
     psmStat(temp);
     psmOn(temp);
     psmOff(temp);
+    GetAPI();
+
 });
+
+
