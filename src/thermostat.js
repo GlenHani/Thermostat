@@ -54,6 +54,11 @@ class Thermostat{
 
     }
 
+     
+
+
+    private;
+
 
 
     isMinimumTemperature() {
@@ -75,3 +80,23 @@ class Thermostat{
 
 
 }
+
+function currentTemp(temp){
+  $('#temperature').html( temp.GetCurrentTemp());
+}
+
+function upTemp(temp){
+  $('#temperature-up').click( function() { 
+    temp.UpTemp()
+    currentTemp(temp);
+  });
+}
+
+$(document).ready(function(){
+  var temp = new Thermostat();
+  currentTemp(temp);
+  upTemp(temp);
+});
+
+
+
