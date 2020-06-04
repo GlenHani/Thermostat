@@ -7,18 +7,21 @@
     <script src="src/thermostat.js"></script>
     <script src="src/interactive.js"></script>
     <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <section class="center-page center city-background">
       <h1 id="temperature"></h1>
+      <a href="./CurrentCity.html" class="btn btn-primary"> Check City </a>
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        Power saving mode is : <span id="power-saving-status"></span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
+        <button class="btn btn-success" id="temperature-up">+</button>
+        <button class="btn btn-danger" id="temperature-down">-</button>
+        <button id="temperature-reset" class="btn btn-light">reset</button>
+        <span class="textcolour">Power saving mode is :</span> <span id="power-saving-status" class="textcolour"></span>
+        <button id="powersaving-on" class="btn btn-success">PSM on</button>
+        <button id="powersaving-off" class="btn btn-danger">PSM off</button>
       </p>
     </section>
   </body>
