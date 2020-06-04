@@ -11,8 +11,11 @@ class Thermostat{
         this.powerSavingMode = true;
       }
 
-    GetCurrentTemp(){
-        return this.temperature
+    GetCurrentTemp(callback){
+      $.get('/temperature', function(res) {
+        var data = JSON.parse(res)
+        callback(data);
+      });
     }
 
     UpTemp(){

@@ -1,7 +1,8 @@
-
 function currentTemp(temp){
-    $('#temperature').text( "Current Temp: " + temp.GetCurrentTemp());
 
+    temp.getCurrentTemperature(function(data){
+    $('#temperature').text( "Current Temp: " + data.tempreture);
+    });
     if (temp.Usage() == "Low - Usage"){
         $('#temperature').removeClass();
         $('#temperature').addClass('low-usage');
@@ -74,16 +75,6 @@ $('#select-city').submit(function(event) {
     console.log(city);
   });
 }
-// $('#select-city').submit(function(event) {
-//     event.preventDefault();
-//     var city = $('#current-city').val();
-//     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=1553e595a684699f6d05e9fe7b9690f1&units=metric', function(data) {
-//       $('#current-temperature').text(data.main.temp);
-//     })
-
-//     console.log(city);
-//   })
-
 
 $(document).ready(function(){
     var temp = new Thermostat();
