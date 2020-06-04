@@ -1,6 +1,6 @@
 function currentTemp(temp){
 
-    temp.getCurrentTemperature(function(data){
+    temp.GetCurrentTemp(function(data){
     $('#temperature').text( "Current Temp: " + data.tempreture);
     });
     if (temp.Usage() == "Low - Usage"){
